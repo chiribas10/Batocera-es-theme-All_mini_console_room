@@ -1,0 +1,66 @@
+<theme>
+    <formatVersion>6</formatVersion>
+    <include>./../theme16x9.xml</include>
+
+	<view name="system">
+	
+		<text name="logoText">
+			<text>System Settings</text>	
+		</text>
+		
+		<text name="system-name" extra="true">
+			<text>System Settings</text>		
+		</text>	
+
+	</view>
+	
+	
+	<view name="grid">
+
+		<image name="help-image" extra="true">
+			<color>ffffff00</color>	
+		</image>
+
+		<imagegrid name="gamegrid">
+			<pos>0.048 0.204</pos>
+			<size>0.926 0.58</size>
+			<margin>0.0083333333333333 0.0222222</margin>
+			<scrollDirection>horizontal</scrollDirection>
+			<folderImage>./art16x9/${style}/folder.png</folderImage>
+		</imagegrid>
+
+		<gridtile name="default">
+			<size>0.175 0.280</size>
+			<padding>0 0</padding>
+			<backgroundCornerSize>0 0</backgroundCornerSize>
+			<backgroundColor>00000000</backgroundColor>
+		</gridtile>
+
+		<gridtile name="selected">
+			<size>0.177 0.282</size>
+			<backgroundColor>00000000</backgroundColor>
+		</gridtile>
+		
+		<text name="logoText">
+			<text>System Settings</text>
+		</text>
+		
+		<image name="players-icon" extra="true">
+		  <pos>2 2</pos>
+		</image>
+		
+		<text name="md_players">
+		  <pos>2 2</pos>
+		</text>		
+		
+		<image name="genre-icon" extra="true">
+		  <pos>2 2</pos>
+		</image>
+		
+		<text name="md_genre">
+		  <pos>2 2</pos>
+		</text>
+		
+	</view>
+	
+</theme>

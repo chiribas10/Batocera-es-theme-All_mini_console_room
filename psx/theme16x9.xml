@@ -1,0 +1,131 @@
+<theme>
+	<formatVersion>7</formatVersion>
+
+	<include>./../theme16x9.xml</include>
+
+	<view name="grid">
+
+		<helpsystem name="help">
+			<pos>2 2</pos>
+		</helpsystem>		
+
+		<image name="background" extra="true">
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<path>./art16x9/background.png</path>
+			<color>ffffff</color>
+		</image>	
+		<imagegrid name="gamegrid">
+			<pos>0.081 0.197</pos>
+			<size>0.85 0.605</size>
+			<margin>0.005 0.010</margin>
+			<padding>0.0 0.0 0.0 0.0</padding>
+			<autoLayout>0 0</autoLayout>
+			<autoLayoutSelectedZoom>0</autoLayoutSelectedZoom>
+			<animateSelection>false</animateSelection>
+		</imagegrid>
+		<gridtile name="default">
+			<size>0.2 0.3</size>
+			<backgroundColor>FFFFFFFF</backgroundColor>
+			<backgroundCornerSize>9 9</backgroundCornerSize>
+			<selectionMode>image</selectionMode>
+			<padding>32 32</padding>
+			<imageColor>FFFFFFFF</imageColor>
+			<imageSizeMode>minSize</imageSizeMode>
+			<backgroundImage>./art16x9/tile.png</backgroundImage>
+		</gridtile>
+		<gridtile name="selected">
+			<padding>32 32</padding>
+			<backgroundImage>./art16x9/tile-selected.png</backgroundImage>
+			<backgroundCenterColor>FFFFFFFF</backgroundCenterColor>
+			<backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor>
+			<imageColor>FFFFFFFF</imageColor>
+		</gridtile>
+		<!-- <imagegrid name="gamegrid"> -->
+		<!-- <pos>0.081 0.197</pos> -->
+		<!-- <size>0.85 0.6</size> -->
+		<!-- <margin>0.005 0.010</margin> -->
+		<!-- <padding>0 0 0 0</padding> -->
+		<!-- <autoLayout>0 0</autoLayout> -->
+		<!-- <autoLayoutSelectedZoom>1</autoLayoutSelectedZoom> -->
+		<!-- <animateSelection>false</animateSelection> -->
+		<!-- </imagegrid> -->
+		<!-- <gridtile name="default"> -->
+		<!-- <size>0.2 0.3</size> -->
+		<!-- <backgroundColor>FFFFFF00</backgroundColor> -->
+		<!-- <backgroundCornerSize>9 9</backgroundCornerSize> -->
+		<!-- <selectionMode>image</selectionMode> -->
+		<!-- <padding>0.03 0.05 0.03 0.04</padding> -->
+		<!-- <imageColor>FFFFFFB0</imageColor> -->
+		<!-- </gridtile> -->
+		<!-- <gridtile name="selected"> -->
+		<!-- <backgroundCenterColor>${centerFadeColor}</backgroundCenterColor> -->
+		<!-- <backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor> -->
+		<!-- <imageColor>FFFFFFFF</imageColor> -->
+		<!-- <backgroundImage>./art16x9/tile-selected.png</backgroundImage> -->
+		<!-- </gridtile> -->
+
+		<image name="title-bar" extra="true">
+			<pos>0.017 0.865</pos>
+			<size>0.968 0.127</size>
+			<path>./art16x9/title-bar.png</path>
+			<color>ffffff</color>	
+			<origin>0 0</origin>
+		</image>
+
+		<text name="md_name">
+			<pos>0.101 0.898</pos>
+			<size>0.694 0.069</size>
+			<origin>0 0</origin>
+			<fontPath>./../art/fonts/PlaystationFont.ttf</fontPath>
+			<fontSize>0.05</fontSize>
+			<color>${selectedNameColor}</color>
+			<forceUppercase>true</forceUppercase>			
+		</text>
+
+		<image name="logo">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.09</pos>
+			<maxSize>0.4 0.16</maxSize>
+			<path>./art16x9/system.png</path>
+		</image>
+
+		<image name="help-image" extra="true">
+			<pos>1.0 1.0</pos>
+			<size>1 0</size>
+			<color>ffffff</color>	
+			<origin>0 1</origin>
+			<zIndex>100</zIndex>			
+		</image>		
+
+		<text name="md_players">
+			<fontPath>./../art/fonts/PlaystationFont.ttf</fontPath>
+			<fontSize>0.05</fontSize>
+		</text>	
+
+	</view>
+	<customView name="Carusel + Marquee" inherits="grid" displayName="Carusel + Marquee">
+		<imagegrid name="gamegrid">     
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<imageSource>image</imageSource>
+		</imagegrid>
+		<gridtile name="selected">
+			<imageSizeMode>minSize</imageSizeMode>
+		</gridtile>
+		<image name="md_image">
+			<visible>false</visible>
+		</image>
+		<video name="md_video">
+			<visible>false</visible>
+		</video>
+		<rating name="md_rating">
+			<visible>false</visible>
+		</rating>
+		<text name="md_description">
+			<visible>false</visible>
+		</text>
+		<image name="button_layouts" extra="true">
+			<visible>false</visible>
+		</image>
+	</customView>
+</theme>

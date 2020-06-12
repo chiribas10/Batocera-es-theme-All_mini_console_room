@@ -1,0 +1,13 @@
+<theme>
+    <formatVersion>7</formatVersion>
+
+	<variables>
+		<style>nesmini</style>
+		<fontname>fonts/NesFont.ttf</fontname>
+		<logoTextColor>ffffff</logoTextColor>
+		<selectedNameColor>000000</selectedNameColor>
+		<selectedNameSegaColor>000000</selectedNameSegaColor>
+		<systemInfoColor>ffffff</systemInfoColor>
+	</variables>
+	
+</theme>

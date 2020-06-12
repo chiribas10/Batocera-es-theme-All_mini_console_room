@@ -1,0 +1,162 @@
+<theme>
+	<formatVersion>7</formatVersion>
+	<include>./../theme16x9.xml</include>
+	
+	<include subset="segamd_var" name="segamd_var1" displayName="Europe">./europe/var.xml</include>
+	<include subset="segamd_var" name="segamd_var2" displayName="Genesis">./genesis/var.xml</include>
+	<include subset="segamd_var" name="segamd_var3" displayName="Asia">./asia/var.xml</include>
+	
+	<variables>
+		<ratiofolder>art16x9</ratiofolder>
+	</variables>
+	<view name="grid">
+		<helpsystem name="help">
+			<pos>2 2</pos>
+		</helpsystem>
+		<image name="background" extra="true">
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<path>./${segamd_var}/${ratiofolder}/background.jpg</path>
+			<color>ffffff</color>
+		</image>
+		<imagegrid name="gamegrid">
+			<pos>0.081 0.197</pos>
+			<size>0.838 0.6</size>
+			<margin>0.005 0.010</margin>
+			<padding>0 0 0 0</padding>
+			<autoLayout>0 0</autoLayout>
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<animateSelection>false</animateSelection>
+			<folderImage>./${segamd_var}/art/folder.png</folderImage>
+			<gameImage>./${segamd_var}/art/cart.png</gameImage>
+		</imagegrid>
+		<gridtile name="default">
+			<size>0.125625 0.288888888888889</size>
+			<backgroundColor>FFFFFF00</backgroundColor>
+			<backgroundCornerSize>9 9</backgroundCornerSize>
+			<selectionMode>image</selectionMode>
+			<padding>16 16</padding>
+			<imageColor>FFFFFFB0</imageColor>
+		</gridtile>
+		<gridtile name="selected">
+			<backgroundImage>./${segamd_var}/art/tile-selected.png</backgroundImage>
+		</gridtile>
+		<image name="title-bar" extra="true">
+			<pos>0.017 0.865</pos>
+			<size>0.968 0.127</size>
+			<path>./${segamd_var}/art/title-bar.png</path>
+			<color>ffffff</color>	
+			<origin>0 0</origin>
+		</image>
+		<text name="md_name">
+			<pos>0.101 0.898</pos>
+			<size>0.694 0.069</size>
+			<origin>0 0</origin>
+			<fontPath>./../art/fonts/SFFlorencesansShaded.ttf</fontPath>
+			<fontSize>0.05</fontSize>
+			<color>${selectedNameSegaColor}</color>
+			<forceUppercase>true</forceUppercase>			
+		</text>
+		<image name="logo">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.09</pos>
+			<maxSize>0.4 0.16</maxSize>
+			<path>./${segamd_var}/art/system.png</path>
+		</image>
+		<image name="help-image" extra="true">
+			<pos>1.0 1.0</pos>
+			<size>1 0</size>
+			<color>ffffff</color>	
+			<origin>0 1</origin>
+			<zIndex>100</zIndex>			
+		</image>		
+	</view>
+	<customView name="Box side" inherits="grid" displayName="Box side">
+		<imagegrid name="gamegrid">
+			<margin>0.002 0.002</margin>		
+			<size>0.84 0.6</size>
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<imageSource>marquee</imageSource>
+			<autoLayout>21 2</autoLayout>
+			<folderImage>./${segamd_var}/art/folder_BS.png</folderImage>
+		</imagegrid>
+		<gridtile name="selected">
+					<backgroundCenterColor>FFFFFFFF</backgroundCenterColor>
+			<backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor>
+			<imageColor>FFFFFFFF</imageColor>
+			<backgroundImage>./${segamd_var}/art/tile-selected_BS.png</backgroundImage>
+			<padding>16 16</padding>
+		</gridtile>
+		<gridtile name="default">
+					<backgroundCenterColor>FFFFFFFF</backgroundCenterColor>
+			<backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor>
+			<imageColor>FFFFFFFF</imageColor>
+			<backgroundImage>./${segamd_var}/art/tile_BS.png</backgroundImage>
+			<imageSizeMode>Size</imageSizeMode>
+			<padding>16 16</padding>
+		</gridtile>
+	</customView>
+	<customView name="Grid + Video" inherits="grid" displayName="${basicGridVideoName}">
+			<imagegrid name="gamegrid">     
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<imageSource>image</imageSource>
+		</imagegrid>
+		<gridtile name="selected">
+			<backgroundCenterColor>FFFFFFFF</backgroundCenterColor>
+			<backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor>
+			<imageColor>FFFFFFFF</imageColor>
+			<backgroundImage>./${segamd_var}/art/tile-selected.png</backgroundImage>
+			<padding>16 16</padding>
+		</gridtile>
+		<gridtile name="default">
+			<imageColor>FFFFFFB0</imageColor>
+			<padding>16 16</padding>
+		</gridtile>
+	</customView>
+	<customView name="Carusel + Marquee" inherits="grid" displayName="Carusel + Marquee">
+		<imagegrid name="gamegrid">
+			<pos>0.05 0.197</pos>
+			<margin>0.002 0.002</margin>		
+			<size>0.4 0.6</size>
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<imageSource>marquee</imageSource>
+			<autoLayout>10 2</autoLayout>
+			<folderImage>./${segamd_var}/art/folder_BS.png</folderImage>
+		</imagegrid>
+		<gridtile name="selected">
+			<backgroundImage>./${segamd_var}/art/tile-selected_BS.png</backgroundImage>
+		</gridtile>
+		<gridtile name="default">
+			<backgroundCenterColor>FFFFFFFF</backgroundCenterColor>
+			<backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor>
+			<imageColor>FFFFFFFF</imageColor>
+			<backgroundImage>./${segamd_var}/art/tile_BS.png</backgroundImage>
+			<imageSizeMode>Size</imageSizeMode>
+		</gridtile>
+		<video name="md_video">
+			<pos>0.7 0.37</pos>
+			<maxSize>0.29 0.39</maxSize>
+			<delay>1</delay>
+			<showSnapshotNoVideo>true</showSnapshotNoVideo>
+			<showSnapshotDelay>true</showSnapshotDelay>
+			<zIndex>90</zIndex>
+		</video>
+		<rating name="md_rating">
+			<color>FFFFFF</color>
+			<pos>0.765 0.57</pos>
+			<size>0.026 0.0347</size>
+<!-- 			<filledPath>./${ratiofolder}/${style}/full.png</filledPath>
+			<unfilledPath>./${ratiofolder}/${style}/empty.png</unfilledPath> -->
+		</rating>
+		<text name="md_description">
+			<pos>0.47 0.62</pos>
+			<size>0.46 0.2</size>
+			<fontSize>0.025</fontSize>
+			<color>A0A0B0</color>
+			<fontPath>./../art/fonts/OCRAEXT.ttf</fontPath>
+		</text>
+		<image name="button_layouts" extra="true">
+			<visible>false</visible>
+		</image>
+	</customView>
+</theme>

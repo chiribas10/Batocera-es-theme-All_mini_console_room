@@ -1,0 +1,147 @@
+<theme>
+	<formatVersion>7</formatVersion>
+	<include>./../theme4x3.xml</include>
+
+	<include subset="segamd_var" name="segamd_var1" displayName="Europe">./europe/var.xml</include>
+	<include subset="segamd_var" name="segamd_var2" displayName="Genesis">./genesis/var.xml</include>
+	<include subset="segamd_var" name="segamd_var3" displayName="Asia">./asia/var.xml</include>
+	
+	<variables>
+		<ratiofolder>art4x3</ratiofolder>
+	</variables>
+	<view name="grid">
+		<image name="background" extra="true">
+			<path>./${segamd_var}/${ratiofolder}/background.jpg</path>
+		</image>	
+		<imagegrid name="gamegrid">
+			<pos>0.02 0.2</pos>
+			<size>0.9 0.6</size>
+			<margin>0.002 0.03</margin>
+			<padding>0 0 0 0</padding>
+			<autoLayout>6 2</autoLayout>
+			<animateSelection>false</animateSelection>
+			<imageSource>image</imageSource>
+			<folderImage>./${segamd_var}/art/folder.png</folderImage>
+			<gameImage>./${segamd_var}/art/cart.png</gameImage>
+		</imagegrid>
+		<gridtile name="default">
+			<padding>16 16</padding>
+			
+		</gridtile>
+		<gridtile name="selected">
+			<backgroundImage>./${segamd_var}/art/tile-selected.png</backgroundImage>
+		</gridtile>
+		<image name="title-bar" extra="true">
+			<pos>0 0.879</pos>
+			<size>1 0.083</size>
+			<path>./${segamd_var}/art/title-bar.png</path>
+			<color>ffffff</color>	
+			<origin>0 0</origin>
+		</image>
+		<text name="md_name">
+			<fontPath>./../art/fonts/SFFlorencesansShaded.ttf</fontPath>
+			<fontSize>0.05</fontSize>
+			<color>${selectedNameSegaColor}</color>
+		</text>
+		<image name="logo">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.09</pos>
+			<maxSize>0.4 0.16</maxSize>
+			<path>./${segamd_var}/art/system.png</path>
+		</image>
+		<image name="help-image" extra="true">
+			<pos>1.0 1.0</pos>
+			<size>1 0</size>
+		</image>		
+	</view>
+	<customView name="Box side" inherits="grid" displayName="Box side">
+		<imagegrid name="gamegrid">
+			<margin>0.002 0.002</margin>		
+			<size>0.9 0.6</size>
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<imageSource>marquee</imageSource>
+			<autoLayout>15 2</autoLayout>
+			<folderImage>./${segamd_var}/art/folder_BS.png</folderImage>
+		</imagegrid>
+		<gridtile name="selected">
+			<backgroundImage>./${segamd_var}/art/tile-selected_BS.png</backgroundImage>
+		</gridtile>
+		<gridtile name="default">
+			<backgroundCenterColor>FFFFFFFF</backgroundCenterColor>
+			<backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor>
+			<imageColor>FFFFFFFF</imageColor>
+			<backgroundImage>./${segamd_var}/art/tile_BS.png</backgroundImage>
+			<imageSizeMode>Size</imageSizeMode>
+		</gridtile>
+	</customView>
+	<customView name="Grid + Video" inherits="grid" displayName="${basicGridVideoName}">
+		<imagegrid name="gamegrid">     
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<imageSource>image</imageSource>
+		</imagegrid>
+		<gridtile name="selected">
+			<backgroundCenterColor>FFFFFFFF</backgroundCenterColor>
+			<backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor>
+			<imageColor>FFFFFFFF</imageColor>
+			<backgroundImage>./${segamd_var}/art/tile-selected.png</backgroundImage>
+			<padding>16 16</padding>
+		</gridtile>
+		<gridtile name="default">
+			<imageColor>FFFFFFB0</imageColor>
+			<padding>16 16</padding>
+		</gridtile>
+	</customView>
+	<customView name="Carusel + Marquee" inherits="grid" displayName="Carusel + Marquee">
+		<imagegrid name="gamegrid">
+			<margin>0.002 0.002</margin>		
+			<size>0.455 0.6</size>
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<imageSource>marquee</imageSource>
+			<autoLayout>8 2</autoLayout>
+			<folderImage>./${segamd_var}/art/folder_BS.png</folderImage>
+		</imagegrid>
+		<gridtile name="selected">
+			<backgroundImage>./${segamd_var}/art/tile-selected_BS.png</backgroundImage>
+		</gridtile>
+		<gridtile name="default">
+			<backgroundCenterColor>FFFFFFFF</backgroundCenterColor>
+			<backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor>
+			<imageColor>FFFFFFFF</imageColor>
+			<backgroundImage>./${segamd_var}/art/tile_BS.png</backgroundImage>
+			<imageSizeMode>Size</imageSizeMode>
+		</gridtile>
+		<video name="md_video">
+			<pos>0.7 0.355</pos>
+			<maxSize>0.29 0.39</maxSize>
+			<delay>1</delay>
+			<showSnapshotNoVideo>true</showSnapshotNoVideo>
+			<showSnapshotDelay>true</showSnapshotDelay>
+			<zIndex>90</zIndex>
+		</video>
+		<rating name="md_rating">
+			<color>FFFFFF</color>
+			<pos>0.765 0.555</pos>
+			<size>0.026 0.0347</size>
+<!-- 			<filledPath>./${ratiofolder}/${segamd_var}/${style}/full.png</filledPath>
+			<unfilledPath>./${ratiofolder}/${segamd_var}/${style}/empty.png</unfilledPath> -->
+		</rating>
+		<text name="md_description">
+			<pos>0.47 0.6</pos>
+			<size>0.46 0.2</size>
+			<fontSize>0.025</fontSize>
+			<color>A0A0B0</color>
+			<fontPath>./../art/fonts/OCRAEXT.ttf</fontPath>
+						<zIndex>100</zIndex>
+		</text>		
+
+		<!-- <image name="desc"  extra="true"> -->
+			<!-- <pos>0.47 0.15</pos> -->
+			<!-- <maxSize>0.525 1</maxSize> -->
+			<!-- <path>./${ratiofolder}/${segamd_var}/desc.png</path> -->
+			<!-- <zIndex>90</zIndex> -->
+		<!-- </image> -->
+		<image name="button_layouts" extra="true">
+			<visible>false</visible>
+		</image>
+	</customView>
+</theme>

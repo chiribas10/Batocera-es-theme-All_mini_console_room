@@ -1,0 +1,321 @@
+<theme>
+	<formatVersion>7</formatVersion>
+
+	<include subset="Ratio" name="16x9" displayName="16x9">./theme16x9.xml</include>
+	<include subset="Ratio" name="4x3" displayName="4x3">./theme4x3.xml</include>
+	
+	<variables>
+		<baseColor>8b0000</baseColor>
+		<gradientEndColor>6b2020</gradientEndColor>
+		<centerFadeColor>8b000050</centerFadeColor>
+		<bottomBarColor>8b0000c0</bottomBarColor>
+		<glowColor>Ab000020</glowColor>
+		<systemInfoColor>DDDDDDD8</systemInfoColor>
+		<tilesViewName>Tiles</tilesViewName>
+	</variables>
+	<view name="screen">
+		<text name="clock">
+			<color>FFFFFFFF</color>
+			<fontSize>0.035</fontSize>
+			<pos>0.90 0.936</pos>
+			<size>0.09 0.058</size>
+			<alignment>right</alignment>
+			<verticalAlignment>center</verticalAlignment>
+			<fontPath>./art/fonts/OCRAEXT.ttf</fontPath>
+		</text>
+		<controllerActivity name="controllerActivity">
+			<pos>0.01 0.012</pos>
+			<size>0.085 0.025</size>
+			<itemSpacing>0.003</itemSpacing>
+			<color>FFFFFF80</color>
+			<activityColor>A0A0FFC0</activityColor>
+			<hotkeyColor>FFA0A0C0</hotkeyColor>
+		</controllerActivity>
+	</view>
+	<view name="menu">
+		<menuText name="menutitle">
+			<fontPath>./art/fonts/OCRAEXT.ttf</fontPath>
+			<fontSize>0.044</fontSize>
+			<color>FAFAFA</color>
+		</menuText>
+		<menuText name="menufooter">
+			<fontPath>./art/fonts/OCRAEXT.ttf</fontPath>
+			<fontSize>0.02</fontSize>
+			<color>777777FF</color>
+		</menuText>
+		<menuText name="menutext">
+			<fontPath>./art/fonts/OCRAEXT.ttf</fontPath>
+			<fontSize>0.038</fontSize>
+			<color>969696</color>
+			<separatorColor>323232FF</separatorColor>
+			<selectorColor>${baseColor}</selectorColor>
+			<selectorColorEnd>${gradientEndColor}</selectorColorEnd>
+			<selectedColor>FFFFFF</selectedColor>
+			<selectorGradientType>horizontal</selectorGradientType>
+		</menuText>
+		<menuTextSmall name="menutextsmall">
+			<fontPath>./art/fonts/OCRAEXT.ttf</fontPath>
+			<fontSize>0.02</fontSize>
+			<color>deec00</color>
+		</menuTextSmall>
+		<menuBackground name="menubg">
+			<cornerSize>32 32</cornerSize>
+		</menuBackground>
+		<menuIcons name="menuicons">
+			<iconKodi>./art/icons/Kodi.png</iconKodi>
+			<iconSystem>./art/icons/System.png</iconSystem>
+			<iconUpdates>./art/icons/Updates.png</iconUpdates>
+			<iconGames>./art/icons/Games.png</iconGames>
+			<iconControllers>./art/icons/Controllers.png</iconControllers>
+			<iconUI>./art/icons/UI.png</iconUI>
+			<iconSound>./art/icons/Sound.png</iconSound>
+			<iconNetwork>./art/icons/Network.png</iconNetwork>
+			<iconScraper>./art/icons/Scraper.png</iconScraper>
+			<iconAdvanced>./art/icons/Advanced.png</iconAdvanced>
+			<iconQuit>./art/icons/Quit.png</iconQuit>
+			<iconRestart>./art/icons/Restart.png</iconRestart>
+			<iconShutdown>./art/icons/Shutdown.png</iconShutdown>
+			<iconFastShutdown>./art/icons/Fastshutdown.png</iconFastShutdown>
+			<iconRetroachievements>./art/icons/Contest.png</iconRetroachievements>
+		</menuIcons>
+		<menuTextEdit name="menutextedit">
+			<inactive>./art/textinput_ninepatch.png</inactive>
+			<active>./art/textinput_ninepatch_active.png</active>
+		</menuTextEdit>
+	</view>
+	
+	<view name="system, grid">
+		<helpsystem name="help">
+			<pos>2 2</pos>
+		</helpsystem>		
+	</view>
+	
+	<view name="system">
+		<image name="help-image" extra="true">
+			<color>ffffff</color>	
+			<origin>0 0</origin>
+			<zIndex>100</zIndex>
+		</image>
+		<image name="background" extra="true">
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<color>ffffff</color>
+		</image>
+		<text name="logoText">
+			<fontPath>./art/${fontname}</fontPath>
+			<color>${logoTextColor}</color>
+			<forceUppercase>true</forceUppercase>
+			<text>${system.fullName}</text>	
+		</text>
+		<carousel name="systemcarousel">
+			<color>00000000</color>
+		</carousel>		
+		<text name="systemInfo">
+			<fontPath>./art/${fontname}</fontPath>
+			<backgroundColor>00000000</backgroundColor>
+			<size>0.395 0.040</size>
+			<pos>0.302 0.788</pos>
+			<color>000000</color>
+			<alignment>center</alignment>
+			<origin>0 0</origin>
+			<zIndex>110</zIndex>			
+		</text>
+	</view>
+	
+	<view name="grid">
+		<image name="background" extra="true">
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<color>ffffff</color>
+		</image>
+		<imagegrid name="gamegrid">
+			<pos>0.01 0.13</pos>
+			<size>0.99 0.7</size>
+			<padding>0.03 0.03 0.03 0.03</padding>
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<animateSelection>false</animateSelection>
+			<folderImage>./${ratiofolder}/${style}/folder.png</folderImage>
+		</imagegrid>
+		<gridtile name="default">
+			<backgroundColor>FFFFFF00</backgroundColor>
+			<backgroundCornerSize>9 9</backgroundCornerSize>
+			<selectionMode>image</selectionMode>
+			<padding>16 16</padding>
+			<imageColor>FFFFFFB0</imageColor>
+			<imageSizeMode>minSize</imageSizeMode>
+		</gridtile>
+		<gridtile name="selected">
+			<padding>16 16</padding>
+			<backgroundCenterColor>FFFFFFFF</backgroundCenterColor>
+			<backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor>
+			<imageColor>FFFFFFFF</imageColor>
+		</gridtile>
+		<text name="gridtile">
+			<color>D0D0D0D0</color>
+			<backgroundColor>00000000</backgroundColor>
+			<fontSize>0.02</fontSize>
+			<alignment>center</alignment>
+			<size>0 0.18</size>
+			<glowColor>00000008</glowColor>
+			<glowSize>3</glowSize>
+		</text>
+		<text name="gridtile_selected">
+			<visible>false</visible>
+		</text>
+		<text name="gridtile">
+			<visible>false</visible>
+		</text>
+
+		<text name="md_name">
+			<origin>0 0</origin>
+			<fontPath>./art/${fontname}</fontPath>
+			<fontSize>0.04</fontSize>
+			<color>${selectedNameColor}</color>
+			<forceUppercase>true</forceUppercase>			
+		</text>
+		<text name="logoText">
+			<size>0.557 0.050</size>
+			<pos>0.224 0.088</pos>
+			<origin>0 0</origin>
+			<fontPath>./art/${fontname}</fontPath>
+			<color>${logoTextColor}</color>		
+			<forceUppercase>true</forceUppercase>			
+		</text>
+
+		<image name="help-image" extra="true">
+			<pos>0.15 0.818</pos>
+			<maxSize>0.694 0.069</maxSize>
+			<color>ffffff</color>	
+			<origin>0 0</origin>
+			<zIndex>100</zIndex>			
+		</image>
+
+		<image name="players-icon" extra="true">
+			<color>FFFFFFFF</color>
+			<maxSize>0.05 0.0708333333333333</maxSize>
+			<origin>0 0</origin>
+			<path>./${ratiofolder}/${style}/players-icon.png</path>
+			<pos>0.799 0.897</pos>
+			<zIndex>100</zIndex>
+		</image>
+
+		<text name="md_players">
+			<alignment>center</alignment>
+			<color>000000ff</color>
+			<zIndex>101</zIndex>
+		</text>		
+
+		<image name="genre-icon" extra="true">
+			<color>FFFFFFFF</color>
+			<maxSize>0.05 0.0722222222222222</maxSize>
+			<origin>0 0</origin>
+			<path>./${ratiofolder}/${style}/genre-icon.png</path>
+			<pos>0.853 0.897</pos>
+			<zIndex>100</zIndex>
+		</image>
+
+		<text name="md_genre">
+			<alignment>center</alignment>
+			<color>fff913ff</color>
+			<size>0.050 0.070</size>
+			<zIndex>101</zIndex>
+		</text>
+
+	</view>
+	
+	<customView name="Box side" inherits="grid" displayName="Box side">
+
+	</customView>
+	
+	<customView name="Grid + Video" inherits="grid" displayName="${basicGridVideoName}">
+		<imagegrid name="gamegrid">     
+			<showVideoAtDelay>800</showVideoAtDelay>
+		</imagegrid>
+		<gridtile name="default">
+		</gridtile>
+	</customView>
+
+	<customView name="Carusel + Marquee" inherits="grid" displayName="Carusel + Marquee">
+		<imagegrid name="gamegrid">     
+			<autoLayout>1 8</autoLayout>
+			<pos>0.01 0.03</pos>
+			<size>0.3 0.942</size>
+			<padding>0.04 0.03 0.04 0.03</padding>
+			<margin>0.0 0.0</margin>
+			<imageSource>marquee</imageSource>
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<animateSelection>true</animateSelection>
+			<scrollLoop>true</scrollLoop>
+			<centerSelection>true</centerSelection>
+			<folderImage>./${ratiofolder}/${style}/folder.png</folderImage>
+<!-- 			<gameImage>./${ratiofolder}/${style}/gameImage.png</gameImage> -->
+		</imagegrid>
+		<text name="gridtile">
+			<!-- <color>D0D0D0D0</color> -->
+			<!-- <backgroundColor>00000000</backgroundColor> -->
+			<fontSize>0.035</fontSize>
+			<fontPath>./art/fonts/AXR_ArcadeMachine.ttf</fontPath>
+			<!-- <alignment>center</alignment> -->
+			<!-- <size>0 0.18</size> -->
+			<!-- <glowColor>00000008</glowColor> -->
+			<!-- <glowSize>3</glowSize> -->
+		</text>
+		<gridtile name="default">
+			<backgroundColor>FFFFFF00</backgroundColor>
+			<backgroundCornerSize>9 9</backgroundCornerSize>
+			<selectionMode>image</selectionMode>
+			<imageColor>FFFFFF60</imageColor>
+			<imageSizeMode>Size</imageSizeMode>
+		</gridtile>
+		<gridtile name="selected">
+			<backgroundCenterColor>FFFFFF00</backgroundCenterColor>
+			<backgroundEdgeColor>FFFFFF00</backgroundEdgeColor>
+			<imageSizeMode>Size</imageSizeMode>
+		</gridtile>
+		<image name="help-image" extra="true">
+			<pos>1 1</pos>
+		</image>
+    	<text name="md_name">
+			<!-- <origin>0 0</origin> -->
+			<fontPath>./art/fonts/AXR_ArcadeMachine.ttf</fontPath>
+			<!-- <fontSize>0.04</fontSize> -->
+			<!-- <color>${selectedNameColor}</color> -->
+			<!-- <forceUppercase>true</forceUppercase>			 -->
+		</text>
+		<image name="md_image">
+			<visible>false</visible>
+		</image>
+		<video name="md_video">
+			<pos>0.6 0.355</pos>
+			<maxSize>0.29 0.39</maxSize>
+			<origin>0.5 0.5</origin>
+			<delay>1</delay>
+			<showSnapshotNoVideo>true</showSnapshotNoVideo>
+			<showSnapshotDelay>true</showSnapshotDelay>
+		</video>
+		<rating name="md_rating">
+			<color>FFFFFF</color>
+			<pos>0.53 0.555</pos>
+			<size>0.026 0.0347</size>
+<!-- 			<filledPath>./${ratiofolder}/${style}/full.png</filledPath>
+			<unfilledPath>./${ratiofolder}/${style}/empty.png</unfilledPath> -->
+			<zIndex>90</zIndex>
+		</rating>
+		<text name="md_description">
+			<pos>0.3 0.6</pos>
+			<size>0.68 0.29</size>
+			<fontSize>0.025</fontSize>
+			<color>A0A0B0</color>
+		</text>
+		<!-- <image name="button_layouts" extra="true"> -->
+			<!-- <color>FFFFFF</color> -->
+			<!-- <origin>0 0</origin> -->
+			<!-- <path>./_art/button_layouts/${system.name}.png</path> -->
+			<!-- <pos>0.626 0.69</pos> -->
+			<!-- <maxSize>0.368715277777778 0.24375</maxSize> -->
+			<!-- <zIndex>90</zIndex> -->
+		<!-- </image> -->
+
+	</customView>
+
+</theme>

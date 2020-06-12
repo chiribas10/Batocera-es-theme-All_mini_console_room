@@ -1,0 +1,115 @@
+<theme>
+	<formatVersion>7</formatVersion>
+
+	<include subset="style" name="Sega Mega Drive mini" displayName="Sega Mega Drive mini">./_style/mdmini.xml</include>	
+	<include subset="style" name="Genesis mini" displayName="Genesis mini">./_style/genesismini.xml</include>
+	<include subset="style" name="Nintendo mini" displayName="Nintendo mini">./_style/nesmini.xml</include>		
+	<include subset="style" name="Retroroom" displayName="Retroroom">./_style/retroroom.xml</include>		
+
+	<include subset="colorset" name="blue" displayName="${blue}">./art/colors/blue.xml</include>
+	<include subset="colorset" name="red" displayName="${red}"/>
+	<include subset="colorset" name="green" displayName="${green}">./art/colors/green.xml</include>
+
+	<include subset="systemview" name="Vertical" displayName="Vertical">./${ratiofolder}/systemviews/vertical.xml</include>
+	<include subset="systemview" name="Vertical+Video" displayName="Vertical+Video">./${ratiofolder}/systemviews/verticalvideo.xml</include>
+
+	<variables>
+		<ratiofolder>art16x9</ratiofolder>
+	</variables>
+	<view name="menu">
+		<menuBackground name="menubg">
+			<path>./${ratiofolder}/${style}/frame.png</path>
+		</menuBackground>
+	</view>
+	<view name="system">
+		<image name="help-image" extra="true">
+			<pos>0.302 0.882</pos>
+			<size>0.392 0.051</size>
+			<path>./${ratiofolder}/${style}/help-system.png</path>
+		</image>
+		<image name="background" extra="true">
+			<path>./${ratiofolder}/${style}/background.png</path>
+			<zIndex>10</zIndex>
+		</image>
+		<image name="console" extra="true">
+			<path>./art/consoles/${system.name}.png</path>
+			<origin>0.5 0.5</origin>
+			<color>FFFFFF77</color>
+			<pos>0.5 0.5</pos>
+			<size>0.5 0.5</size>
+			<zIndex>11</zIndex>
+		</image>
+<!-- 		<image name="systemback" extra="true">
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<path>./${ratiofolder}/${style}/art/${system.name}.png</path>
+			<zIndex>11</zIndex>
+		</image> -->
+		<text name="logoText">
+			<fontSize>0.04</fontSize>
+		</text>
+
+		<text name="systemInfo">
+			<fontSize>0.03</fontSize>
+		</text>
+	</view>
+	
+	<view name="grid">
+		<image name="background" extra="true">
+			<path>./${ratiofolder}/${style}/background_system.png</path>
+		</image>
+
+		<imagegrid name="gamegrid">
+			<margin>0.002 0.025</margin>
+			<autoLayout>7 2</autoLayout>
+		</imagegrid>
+		<gridtile name="selected">
+			<backgroundCenterColor>FFFFFFFF</backgroundCenterColor>
+			<backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor>
+			<imageColor>FFFFFFFF</imageColor>
+			<backgroundImage>./${ratiofolder}/${style}/tile-selected.png</backgroundImage>
+			<padding>16 16</padding>
+		</gridtile>
+		<image name="title-bar" extra="true">
+			<pos>0.017 0.865</pos>
+			<size>0.968 0.127</size>
+			<color>ffffff</color>	
+			<origin>0 0</origin>
+			<path>./${ratiofolder}/${style}/title-bar.png</path>
+		</image>
+		<text name="md_name">
+			<pos>0.101 0.898</pos>
+			<size>0.694 0.069</size>
+		</text>
+		<text name="logoText">
+			<fontSize>0.065</fontSize>
+		</text>
+		<image name="help-image" extra="true">
+			<path>./${ratiofolder}/${style}/help-gamelist.png</path>
+		</image>
+		<text name="md_players">
+			<fontPath>./art/fonts/NiseSegaCyrillic.ttf</fontPath>
+			<fontSize>0.039</fontSize>
+			<pos>0.8031 0.9029</pos>
+			<size>0.0422 0.0411</size>
+		</text>		
+		<text name="md_genre">
+			<fontPath>./art/fonts/GamesGenre.ttf</fontPath>
+			<fontSize>0.0855</fontSize>
+			<pos>0.853 0.939</pos>
+		</text>
+	</view>
+	
+	<customView name="Box side" inherits="grid" displayName="Box side">
+
+	</customView>
+	
+	<customView name="Grid + Video" inherits="grid" displayName="${basicGridVideoName}">
+
+	</customView>
+
+	<customView name="Carusel + Marquee" inherits="Grid + Video" displayName="Carusel + Marquee">
+	
+	</customView>
+
+</theme>

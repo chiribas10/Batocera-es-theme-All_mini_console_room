@@ -1,0 +1,116 @@
+<theme>
+    <formatVersion>7</formatVersion>
+
+	 <include>./../theme16x9.xml</include>
+	
+	<view name="grid">
+
+		<helpsystem name="help">
+			<pos>2 2</pos>
+		</helpsystem>		
+	
+		<image name="background" extra="true">
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<path>./art16x9/background.png</path>
+			<color>ffffff</color>
+		</image>	
+		<imagegrid name="gamegrid">
+			<scrollDirection>horizontal</scrollDirection>
+			<pos>0 0.351</pos>
+			<size>1 0.34</size>
+			<margin>0.005 0.010</margin>
+			<padding>0 0 0 0</padding>
+			<autoLayout>4 1</autoLayout>
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<animateSelection>false</animateSelection>
+			<folderImage>./art/folder.png</folderImage>
+			<gameImage>./art/cart.png</gameImage>
+		</imagegrid>
+		<gridtile name="default">
+			<backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor>
+			<backgroundCornerSize>9 9</backgroundCornerSize>
+			<selectionMode>image</selectionMode>
+			<padding>8 7</padding>
+			<imageColor>FFFFFFB0</imageColor>
+			<imageSizeMode>minSize</imageSizeMode>
+			<backgroundImage>./art16x9/tile.png</backgroundImage>
+		</gridtile>
+		<gridtile name="selected">
+			<backgroundCenterColor>${centerFadeColor}</backgroundCenterColor>
+			<backgroundEdgeColor>FFFFFFFF</backgroundEdgeColor>
+			<imageColor>FFFFFFFF</imageColor>
+			<backgroundImage>./art16x9/tile-selected.png</backgroundImage>
+		</gridtile>
+		<image name="title-bar" extra="true">
+			<pos>0.5 0.2185185185185185</pos>
+			<size>0.5583333333333333 0.0814814814814815</size>
+			<path>./art16x9/title-bar.png</path>
+			<color>ffffff</color>	
+			<origin>0.5 0.5</origin>
+		</image>
+		<image name="title-bar" extra="true">
+			<pos>0.5 0.2185185185185185</pos>
+			<size>0.5583333333333333 0.0814814814814815</size>
+			<path>./art16x9/title-bar.png</path>
+			<color>ffffff</color>	
+			<origin>0.5 0.5</origin>
+		</image>
+		
+		<text name="md_name">
+			<pos>0.5 0.2185185185185185</pos>
+			<size>0.5416666666666667 0.0592592592592593</size>
+			<origin>0.5 0.5</origin>
+			<fontPath>./../art/fonts/NesFont.ttf</fontPath>
+			<fontSize>0.04</fontSize>
+			<color>${selectedNameColor}</color>
+			<forceUppercase>true</forceUppercase>			
+		</text>
+		
+		<image name="logo">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.1065</pos>
+			<maxSize>0.4 0.16</maxSize>
+			<path>./art16x9/system.png</path>
+		</image>
+
+		<image name="help-image" extra="true">
+			<pos>0.214 0.78</pos>
+			<maxSize>0.635 0.082</maxSize>
+			<path>./art16x9/help-gamelist.png</path>
+			<color>ffffff</color>	
+			<zIndex>100</zIndex>			
+		</image>		
+		
+	</view>
+	<customView name="Grid + Video" inherits="grid" displayName="${basicGridVideoName}">
+			<imagegrid name="gamegrid">     
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<imageSource>image</imageSource>
+		</imagegrid>
+		<gridtile name="default">
+			<imageColor>FFFFFFB0</imageColor>
+			<padding>8 7</padding>
+		</gridtile>
+		<gridtile name="selected">
+			<padding>8 7</padding>
+		</gridtile>
+	</customView>
+	<customView name="Carusel + Marquee" inherits="Grid + Video" displayName="Carusel + Marquee">
+		<image name="md_image">
+			<visible>false</visible>
+		</image>
+		<video name="md_video">
+			<visible>false</visible>
+		</video>
+		<rating name="md_rating">
+			<visible>false</visible>
+		</rating>
+		<text name="md_description">
+			<visible>false</visible>
+		</text>
+		<image name="button_layouts" extra="true">
+			<visible>false</visible>
+		</image>
+	</customView>
+</theme>

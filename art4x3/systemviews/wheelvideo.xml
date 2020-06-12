@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	
+	<variables>
+		<ratiofolder>art4x3</ratiofolder>
+	</variables>
+	
+	<view name="system">
+		<carousel name="systemcarousel">
+			<type>vertical_wheel</type>
+			<pos>0.475 0.0265</pos>
+			<size>0.5 0.95</size>
+			<origin>0 0</origin>
+			<color>00000000</color>
+			<logoScale>1.5</logoScale>
+			<logoSize>0.2 0.2</logoSize>
+			<logoRotation>-6.5</logoRotation>
+			<logoRotationOrigin>3.5 .5</logoRotationOrigin>
+			<logoAlignment>right</logoAlignment>
+			<maxLogoCount>6</maxLogoCount>
+			<systemInfoDelay>0.1</systemInfoDelay>
+			<zIndex>75</zIndex>
+		</carousel>
+		<video name="md_video" extra="true">
+			<path>./../../art/videos/${system.name}.mp4</path>
+			<origin>0 0</origin>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<zIndex>73</zIndex>
+		</video>
+
+		<image name="videoframe" extra="true">
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<color>ffffff</color>
+			<path>./../${style}/backgroundVideo.png</path>
+			<zIndex>74</zIndex>
+		</image>
+<!-- 		<image name="console" extra="true">
+			<path>./../${style}/consoles/${system.name}.png</path>
+			<origin>0 0</origin>
+			<color>FFFFFF</color>
+			<pos>0.05 0.05</pos>
+			<size>0.8 0.8</size>
+			<zIndex>70</zIndex>
+		</image> -->
+		<image name="logo" extra="true">
+			<pos>1 1</pos>
+			<path>./../${style}/logos/${system.name}.png</path>
+		</image>
+	</view>
+</theme>

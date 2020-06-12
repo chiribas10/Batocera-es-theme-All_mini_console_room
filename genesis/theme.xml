@@ -1,0 +1,8 @@
+<theme>
+	<formatVersion>7</formatVersion>
+
+	<include>./../theme.xml</include>
+	
+	<include subset="Ratio" name="16x9" displayName="16x9">./theme16x9.xml</include>
+	<include subset="Ratio" name="4x3" displayName="4x3">./theme4x3.xml</include>
+</theme>
