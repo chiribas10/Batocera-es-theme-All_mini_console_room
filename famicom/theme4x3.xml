@@ -4,7 +4,7 @@
 	<include>./../theme4x3.xml</include>
 
 	<include subset="famicom_var" name="famicom_var1" displayName="Varinat 1">./${ratiofolder}/var1/var.xml</include>
-	<include subset="famicom_var" name="famicom_var2" displayName="Varinat 2">./${ratiofolder}/var2/var.xml</include>
+	<!-- <include subset="famicom_var" name="famicom_var2" displayName="Varinat 2">./${ratiofolder}/var2/var.xml</include> -->
 	
 	<variables>
 		<ratiofolder>art4x3</ratiofolder>
