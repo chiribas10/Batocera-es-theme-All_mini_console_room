@@ -16,7 +16,7 @@
 			<backgroundColor>161616</backgroundColor>
 		</splash>
 		<image name="background">
-			<path>./art/images/splash.png</path>
+			<path>./art/images/splash.jpg</path>
 		</image>
 
 		<image name="progressbar">
