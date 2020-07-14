@@ -15,13 +15,15 @@
 			<color>ffffff</color>
 		</image>
 		<imagegrid name="gamegrid">
-			<pos>0.081 0.197</pos>
-			<size>0.838 0.6</size>
+			<pos>0.1 0.195</pos>
+			<size>0.838 0.58</size>
 			<margin>0.005 0.010</margin>
 			<padding>0 0 0 0</padding>
 			<autoLayout>0 0</autoLayout>
 			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
 			<animateSelection>false</animateSelection>
+			<folderImage>./art/folder.png</folderImage>
+			<gameImage>./art/cart.png</gameImage>
 		</imagegrid>
 		<gridtile name="default">
 			<size>0.125625 0.288888888888889</size>
@@ -67,7 +69,6 @@
 	<customView name="Box side" inherits="grid" displayName="Box side">
 		<imagegrid name="gamegrid">
 			<margin>0.002 0.002</margin>		
-			<size>0.84 0.6</size>
 			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
 			<imageSource>marquee</imageSource>
 			<autoLayout>21 2</autoLayout>
@@ -90,7 +91,7 @@
 		</gridtile>
 	</customView>
 	<customView name="Grid + Video" inherits="grid" displayName="${basicGridVideoName}">
-			<imagegrid name="gamegrid">     
+			<imagegrid name="gamegrid"> 
 			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
 			<imageSource>image</imageSource>
 		</imagegrid>
