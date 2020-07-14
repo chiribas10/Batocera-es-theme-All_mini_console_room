@@ -96,7 +96,7 @@
 		<text name="md_genre">
 			<fontPath>./art/fonts/GamesGenre.ttf</fontPath>
 			<fontSize>0.0855</fontSize>
-			<pos>0.853 0.939</pos>
+			<pos>0.853 0.906</pos>
 		</text>
 	</view>
 	

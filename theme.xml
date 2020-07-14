@@ -4,6 +4,7 @@
 	<include subset="Ratio" name="16x9" displayName="16x9">./theme16x9.xml</include>
 	<include subset="Ratio" name="4x3" displayName="4x3">./theme4x3.xml</include>
 	
+	
 	<variables>
 		<baseColor>8b0000</baseColor>
 		<gradientEndColor>6b2020</gradientEndColor>
@@ -15,9 +16,9 @@
 	</variables>
 	<view name="screen">
 		<text name="clock">
-			<color>FFFFFFFF</color>
-			<fontSize>0.035</fontSize>
-			<pos>0.90 0.936</pos>
+			<color>FFFFFF6F</color>
+			<fontSize>0.02</fontSize>
+			<pos>0.79 0.936</pos>
 			<size>0.09 0.058</size>
 			<alignment>right</alignment>
 			<verticalAlignment>center</verticalAlignment>
@@ -104,7 +105,7 @@
 		</image>
 		<text name="logoText">
 			<fontPath>./art/${fontname}</fontPath>
-			<color>${logoTextColor}</color>
+			<color>FFFFFFFF</color>
 			<forceUppercase>true</forceUppercase>
 			<text>${system.fullName}</text>	
 		</text>
@@ -116,7 +117,7 @@
 			<backgroundColor>00000000</backgroundColor>
 			<size>0.395 0.040</size>
 			<pos>0.302 0.788</pos>
-			<color>000000</color>
+			<color>FFFFFF</color>
 			<alignment>center</alignment>
 			<origin>0 0</origin>
 			<zIndex>110</zIndex>			
@@ -135,7 +136,7 @@
 			<padding>0.03 0.03 0.03 0.03</padding>
 			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
 			<animateSelection>false</animateSelection>
-			<folderImage>./${ratiofolder}/${style}/folder.png</folderImage>
+			<folderImage>./art/folder.png</folderImage>
 		</imagegrid>
 		<gridtile name="default">
 			<backgroundColor>FFFFFF00</backgroundColor>
@@ -179,7 +180,7 @@
 			<pos>0.224 0.088</pos>
 			<origin>0 0</origin>
 			<fontPath>./art/${fontname}</fontPath>
-			<color>${logoTextColor}</color>		
+			<color>FFFFFFFF</color>		
 			<forceUppercase>true</forceUppercase>			
 		</text>
 
@@ -255,7 +256,7 @@
 			<!-- <color>D0D0D0D0</color> -->
 			<!-- <backgroundColor>00000000</backgroundColor> -->
 			<fontSize>0.035</fontSize>
-			<fontPath>./art/fonts/AXR_ArcadeMachine.ttf</fontPath>
+			<fontPath>./art/fonts/OCRAEXT.ttf</fontPath>
 			<!-- <alignment>center</alignment> -->
 			<!-- <size>0 0.18</size> -->
 			<!-- <glowColor>00000008</glowColor> -->
@@ -278,7 +279,7 @@
 		</image>
     	<text name="md_name">
 			<!-- <origin>0 0</origin> -->
-			<fontPath>./art/fonts/AXR_ArcadeMachine.ttf</fontPath>
+			<fontPath>./art/fonts/OCRAEXT.ttf</fontPath>
 			<!-- <fontSize>0.04</fontSize> -->
 			<!-- <color>${selectedNameColor}</color> -->
 			<!-- <forceUppercase>true</forceUppercase>			 -->
