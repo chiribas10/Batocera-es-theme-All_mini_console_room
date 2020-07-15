@@ -1,4 +1,8 @@
 <theme>
+
+	<include subset="segacd_var" name="segacd_var1" displayName="Varinat 1">./${ratiofolder}/var1/var.xml</include>
+	<include subset="segacd_var" name="segacd_var2" displayName="Varinat 2">./${ratiofolder}/var2/var.xml</include>
+
 	<formatVersion>7</formatVersion>
 	<include>./../theme16x9.xml</include>
 	<variables>
