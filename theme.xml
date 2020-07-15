@@ -117,7 +117,7 @@
 			<backgroundColor>00000000</backgroundColor>
 			<size>0.395 0.040</size>
 			<pos>0.302 0.788</pos>
-			<color>FFFFFF</color>
+			<color>000000FF</color>
 			<alignment>center</alignment>
 			<origin>0 0</origin>
 			<zIndex>110</zIndex>			

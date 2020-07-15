@@ -15,7 +15,7 @@
 		<image name="background" extra="true">
 			<pos>0 0</pos>
 			<size>1 1</size>
-			<path>./${ratiofolder}/background.jpg</path>
+			<path>./${ratiofolder}/${segacdvar}/background.jpg</path>
 			<color>ffffff</color>
 		</image>
 		<imagegrid name="gamegrid">
